@@ -1,152 +1,131 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-  <title>¡TUTORIALES DE SISTEMA DE ALARMA PARADOX SP5500!</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Schelbeth Systems — Innovación en seguridad</title>
   <style>
-    .titulo {
-      text-align: center;     /* Centra el texto */
-      color: rgb(239, 244, 248);           /* Color del texto */
-      font-size: 48px;        /* Tamaño de letra */
-      font-family: Arial, sans-serif; /* Fuente legible */
+    :root{
+      --accent:#0b63a7;
+      --bg-overlay: rgba(0,0,0,0.35);
+      --glass: rgba(255,255,255,0.06);
+      --max-width:1100px;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%;margin:0;background:transparent;color:#0a0a0a}
+    /* Contenedor centrado */
+    .wrap{max-width:var(--max-width);margin:40px auto;padding:24px}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      border-radius:var(--radius);
+      overflow:hidden;
+      min-height:360px;
+      display:flex;
+      align-items:flex-end;
+      background-image: url('src/image/logo1.png'); /* reemplaza con tu imagen */
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    /* Si quieres fondo transparente en vez de imagen, borra la línea background-image o usa: background: transparent; */
+
+    /* Capa oscura para legibilidad */
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;background:var(--bg-overlay);backdrop-filter:blur(2px);
+    }
+
+    /* Navegación en la esquina superior derecha, encima de la imagen */
+    nav.topnav{
+      position:absolute;top:16px;right:16px;z-index:5;display:flex;gap:12px;align-items:center;
+      background:transparent;padding:8px;border-radius:10px;
+    }
+    nav.topnav a{
+      text-decoration:none;color:white;font-weight:600;padding:8px 12px;border-radius:8px;background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(4px);
+    }
+    nav.topnav a:hover{transform:translateY(-2px);transition:all .18s}
+
+    /* Tarjeta de contenido dentro del hero */
+    .hero-content{
+      position:relative;z-index:4;padding:28px;background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      backdrop-filter: blur(4px);width:100%;
+    }
+    .brand{color:white;font-size:28px;font-weight:800;margin-bottom:6px}
+    .tag{color:#e6f3ff;font-size:15px;margin-bottom:12px}
+
+    /* Sección principal de texto */
+    .content{background:#fff;border-radius:12px;padding:24px;margin-top:18px;box-shadow:0 8px 30px rgba(10,10,10,0.06)}
+    .content h2{color:var(--accent);margin-bottom:8px}
+    .content p{line-height:1.6;color:#222}
+    .list{margin:14px 0 0 18px}
+    .list li{margin:10px 0}
+
+    /* Responsive */
+    @media (max-width:720px){
+      .wrap{margin:20px;padding:16px}
+      .brand{font-size:20px}
+      nav.topnav{top:10px;right:10px}
+      .hero{min-height:300px}
     }
   </style>
 </head>
-<h1 class="titulo">¡TUTORIALES DE SISTEMA DE ALARMA PARADOX SP5500!</h1>
-</body>
-  </head>
-  <button onclick="location.href='index1.html'">Pagina Principal</button>
-  </button>
+
 <body>
-  <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Imagen de Fondo</title>
-  <style>
-   body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      background-color: #000;
-      text-align: center;
-    }
+  <div class="wrap">
+    <section class="hero" role="banner" aria-label="Schelbeth Systems">
+      <!-- Navigation: enlaces delante de la imagen y en la esquina superior derecha -->
+      <nav class="topnav" aria-label="Menú principal">
+        <a href="index1.html">Inicio</a>
+        <a href="index4.html">¿Quienes somos?</a>
+        <a href="index5.html">Nuestro Trabajos</a>
+        <a href="index5.html">Equipos que utilizamos</a>
+        <a href="index3.html">Contactos</a>
+      </nav>
 
-    .fondo {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
+      <div class="hero-content">
+        <div class="brand">Schelbeth Systems</div>
+        <div class="tag">Innovación y confianza en seguridad inteligente</div>
+        <p style="color:rgba(235, 234, 240, 0.95);margin:0;max-width:820px">Schelbeth Systems es una empresa dedicada al desarrollo de soluciones innovadoras en seguridad, combinando tecnología avanzada con estrategias personalizadas para proteger a personas, empresas e instituciones.</p>
+      </div>
+    </section>
 
-    .contenido {
-      position: relative;
-      z-index: 1;
-      padding: 50px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    <main class="content" id="inicio">
+      <h2>Sobre Schelbeth Systems</h2>
+      <p>Nuestro objetivo es transformar la seguridad tradicional en un sistema inteligente, preventivo y confiable, adaptado a las necesidades de cada cliente. Para ello integramos inteligencia artificial, monitoreo en tiempo real, ciberseguridad y sistemas físicos de protección, garantizando una cobertura completa frente a riesgos modernos.</p>
 
-    .titulo {
-      font-size: 48px;
-      margin-bottom: 30px;
-    }
+      <p>En Schelbeth Systems creemos que la seguridad no es un gasto, sino una inversión en confianza y tranquilidad. Nuestro equipo multidisciplinario trabaja en proyectos que abarcan:</p>
 
-    form {
-      width: 100%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
+      <ul class="list">
+        <li>Sistemas de videovigilancia inteligente con análisis predictivo.</li>
+        <li>Soluciones de ciberseguridad para la protección de datos y redes críticas.</li>
+        <li>Automatización de accesos y control perimetral con tecnología biométrica.</li>
+        <li>Consultoría y auditorías de seguridad para empresas e instituciones.</li>
+        <li>Desarrollo de software y plataformas integradas para monitoreo centralizado.</li>
+      </ul>
 
-    input, textarea {
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-    }
+      <p>Con una filosofía basada en la innovación constante, la ética profesional y la excelencia técnica, Schelbeth Systems se posiciona como un socio estratégico en la construcción de entornos más seguros, resilientes y confiables.</p>
 
-    button {
-      padding: 10px;
-      font-size: 16px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+      <section id="quienes-somos" style="margin-top:18px">
+        <h3>Quiénes somos</h3>
+        <p>Somos un equipo de ingenieros, analistas y especialistas en seguridad dedicados a diseñar soluciones a medida. Trabajamos de la mano con nuestros clientes para entender riesgos y proponer medidas que reduzcan la exposición a amenazas.</p>
+      </section>
 
-    button:hover {
-      background-color: #0056b3;
-    }
+      <section id="equipo" style="margin-top:18px">
+        <h3>Nuestro equipo</h3>
+        <p>Contamos con profesionales en ingeniería electrónica, ciberseguridad, IA y gestión de proyectos. Nuestra estructura facilita la colaboración entre disciplinas para entregar soluciones integradas.</p>
+      </section>
 
-    a {
-      font-size: 20px;
-      color: #00c3ff;
-      margin: 10px 0;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #22c95a;
-    }
-
-    .boton-volver {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-  </style>
-</head>
-<body>
-  <img class="fondo" src="src/image/dsc.jpg" alt="Fondo">
-  <div class="contenido">
-    <h1></h1>
+      <section id="contacto" style="margin-top:18px">
+        <h3>Contacto</h3>
+        <p>¿Quieres una demo o una consultoría? <a href="mailto:info@schelbethsystems.com">info@schelbethsystems.com</a> - También puedes agregar un formulario de contacto aquí.</p>
+      </section>
+    </main>
   </div>
+  <!-- Sugerencia: sustituye 'fondo.jpg' por la ruta de tu imagen o elimina la imagen para un fondo transparente -->
 </body>
-</html>
-  </style>
-</head>
-<body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</body>
-</body>
-
 </html>

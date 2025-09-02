@@ -2,33 +2,22 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>¡TUTORIALES DEL SISTEMA DSC 1832!</title>
+  <title>INNOVACIÓN EN SEGURIDAD</title>
   <style>
-    .titulo {
-      text-align: center;     /* Centra el texto */
-      color: rgb(239, 244, 248);           /* Color del texto */
-      font-size: 48px;        /* Tamaño de letra */
-      font-family: Arial, sans-serif; /* Fuente legible */
-    }
-  </style>
-</head>
-<h1 class="titulo">¡TUTORIALES DEL SISTEMA DSC 1832!</h1>
-</body>
-  </head>
-  <button onclick="location.href='index1.html'">Pagina Principal</button>
-  </button>
-<body>
-  <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Imagen de Fondo</title>
-  <style>
-  body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
       color: white;
       background-color: #000;
       text-align: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
     }
 
     .fondo {
@@ -44,109 +33,123 @@
     .contenido {
       position: relative;
       z-index: 1;
-      padding: 50px 20px;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 300px;
+      height: auto;
+      z-index: 2;
+      margin-bottom: 40px;
+      animation: aparecerZoom 4s ease-out forwards, flotar 6s ease-in-out infinite;
+      opacity: 0;
+    }
+
+    @keyframes aparecerZoom {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes flotar {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
     }
 
     .titulo {
-      font-size: 48px;
-      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #1fabc4;
+      animation: entrada 4s ease-out forwards, brillo 6s infinite alternate;
+      opacity: 0;
     }
 
-    form {
-      width: 100%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-bottom: 30px;
+    @keyframes entrada {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
-    input, textarea {
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
+    @keyframes brillo {
+      0% {
+        text-shadow: 0 0 5px #021a15, 0 0 10px #02130f;
+      }
+      100% {
+        text-shadow: 0 0 15px #031411, 0 0 30px #011612;
+      }
     }
 
-    button {
-      padding: 10px;
-      font-size: 16px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+    .botonera {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+  background: transparent;  /* Fondo totalmente transparente */
+  z-index: 10; /* delante del fondo */
+}
 
-    button:hover {
-      background-color: #0056b3;
-    }
+.botonera button {
+  padding: 10px 18px;
+  font-size: 14px;
+  border: none;
+  background-color: transparent; /* Fondo transparente */
+  color: #111010; /* Blanco para que se vea sobre la imagen */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
 
-    a {
-      font-size: 20px;
-      color: #00c3ff;
-      margin: 10px 0;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #22c95a;
-    }
-
-    .boton-volver {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
-</head>
+.botonera button:hover {
+  color: #f0ecec;
+  text-shadow: 0 0 10px #0804f7;
+}
   </style>
 </head>
 <body>
-  <img class="fondo" src="src/image/dsc.jpg" alt="Fondo">
+
+  <!-- Imagen de fondo -->
+  <img class="fondo" src="src/image/fondo2.png" alt="Fondo">
+
+  <!-- Contenido principal -->
   <div class="contenido">
-    <h1></h1>
+    <!-- Imagen animada centrada -->
+    <img class="logo" src="src/image/logo1.png" alt="Logo centrado animado">
+
+    <!-- Título animado -->
+    <h1 class="titulo">INNOVACIÓN EN SEGURIDAD</h1>
   </div>
-</body>
-</html>
-  </style>
-</head>
-<body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</video>
-</body>
-<video width="640" height="360" controls>
-  <source src="src/raw/teclado.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de video.
-</video>
-</body>
+
+  <!-- Botonera inferior -->
+  <div class="botonera">
+    <button onclick="location.href='index2.html'">Inicio</button>
+    <button onclick="location.href='index4.html'">¿Quienes Somos?</button>
+    <button onclick="location.href='index5.html'">Nuestro Trabajo</button>
+    <button onclick="location.href='index6.html'">Equipos que utilizamos</button>
+    <button onclick="location.href='index3.html'">Contactos</button>
+  </div>
+
 </body>
 </html>
